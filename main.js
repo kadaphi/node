@@ -2,7 +2,7 @@ const { Telegraf } = require("telegraf");
 const axios = require("axios");
 const app = require("express")();
 const { Web3 } = require('web3');
-const bot = new Telegraf('Your Bot token');
+const bot = new Telegraf('6601104327:AAE78jk6bgpE0BuTkoqVae1Jw6JFMf05wWg');
 let admin;
 admin = "@testimony201";
 const btc_time = 2000000 //1000 = 1 secs

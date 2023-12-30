@@ -9,7 +9,7 @@ const btc_time = 2000000 //1000 = 1 secs
 const trx_time = 100000 //1000 = 1 secs
 const usdt_time = 20000 //1000 = 1 secs
 const eth_time = 25000 //1000 = 1 secs
-const bnb_time = 1200000 //1000 = 1 secs
+const bnb_time = 600000 //1000 = 1 secs
 
 
 async function getName(){
@@ -224,7 +224,7 @@ bot.hears("BNB",async ctx => {
     const data = result.data
     const txid = data.hash;
     const amount = data.value;
-    if (amount > 20 || amount < 10000){
+    if (amount < 0.0635380 || amount < 20){
       ctx.reply("Amount is Either less or High than required "+amount+" BNB");
       return;
     }

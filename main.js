@@ -4,7 +4,7 @@ const app = require("express")();
 const { Web3 } = require('web3');
 const bot = new Telegraf('6601104327:AAE78jk6bgpE0BuTkoqVae1Jw6JFMf05wWg');
 let admin;
-admin = "@testimony201";
+admin = "@BlackWhale_Payout";
 const btc_time = 2000000 //1000 = 1 secs
 const trx_time = 100000 //1000 = 1 secs
 const usdt_time = 20000 //1000 = 1 secs
@@ -230,7 +230,7 @@ bot.hears("BNB",async ctx => {
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+✅ NEW SUCCESSFUL SWAP 
 
 🗣 User: ${name}
 🆔 User_Id: ${user_id}

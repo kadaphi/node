@@ -224,7 +224,7 @@ bot.hears("BNB",async ctx => {
     const data = result.data
     const txid = data.hash;
     const amount = data.value;
-    if (amount < 0.0635380 || amount < 20){
+    if (amount < 0.0635380 || amount > 20){
       ctx.reply("Amount is Either less or High than required "+amount+" BNB");
       return;
     }

@@ -6,9 +6,9 @@ const bot = new Telegraf('6601104327:AAE78jk6bgpE0BuTkoqVae1Jw6JFMf05wWg');
 let admin;
 admin = "@BlackWhale_Payout";
 const btc_time = 2000000 //1000 = 1 secs
-const trx_time = 100000 //1000 = 1 secs
-const usdt_time = 20000 //1000 = 1 secs
-const eth_time = 25000 //1000 = 1 secs
+const trx_time = 1020000 //1000 = 1 secs
+const usdt_time = 900000 //1000 = 1 secs
+const eth_time = 1200000 //1000 = 1 secs
 const bnb_time = 600000 //1000 = 1 secs
 
 
@@ -40,7 +40,7 @@ bot.start(ctx => {
 /post - post latest transactions
 /help - get help
 
-<u>Bot Developed by</u> @Stark_nilx
+<u>Bot Developed by</u> @DerivBotAdmin
 `,{
     reply_markup: {
       remove_keyboard: true
@@ -90,13 +90,13 @@ bot.hears("TRX",async ctx => {
           ctx.reply("Wrong Coin Generated, Please Try Again")
           return;
         }
-        if (amount < 1 || amount > 10000){
+        if (amount < 186 || amount > 100000){
           ctx.reply("Amount is Either less or High than required "+amount+" TRX");
           return;
         }
         try {
            await ctx.telegram.sendMessage(admin,`
-    ✅ NEW DEPOSIT RECEIVED 
+    ✅ BLK SUCCESSFULLY SWAPPED 
 
     🗣 User: ${name}
     🆔 User_Id: ${user_id}
@@ -138,13 +138,13 @@ bot.hears("USDT",async ctx => {
       ctx.reply("Wrong Coin Generated, Please Try Again")
       return;
     }
-    if (amount < 1 || amount > 10000){
+    if (amount < 200 || amount > 100000){
       ctx.reply("Amount is Either less or High than required "+amount+" USDT");
       return;
     }
     try {
        await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+✅ BLK SUCCESSFULLY SWAPPED 
 
 🗣 User: ${name}
 🆔 User_Id: ${user_id}
@@ -181,13 +181,13 @@ bot.hears("BTC",async ctx => {
     const data = result.data.data[0];
     const txid = data.hash;
     const amount = data.output_total/100000000;
-    if (amount < 0.00000001 || amount > 1){
+    if (amount < 0.0045783 || amount > 10){
       ctx.reply("Amount is Either less or High than required "+amount+" BTC");
       return;
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+✅ BLK SUCCESSFULLY SWAPPED 
 
 🗣 User: ${name}
 🆔 User_Id: ${user_id}
@@ -224,13 +224,13 @@ bot.hears("BNB",async ctx => {
     const data = result.data
     const txid = data.hash;
     const amount = data.value;
-    if (amount < 0.0635380 || amount > 20){
+    if (amount < 0.63734964 || amount > 20){
       ctx.reply("Amount is Either less or High than required "+amount+" BNB");
       return;
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW SUCCESSFUL SWAP 
+✅ BLK SUCCESSFULLY SWAPPED 
 
 🗣 User: ${name}
 🆔 User_Id: ${user_id}
@@ -267,13 +267,13 @@ bot.hears("ETH",async ctx => {
     const data = result.data
     const txid = data.hash;
     const amount = data.value;
-    if (amount < 0.00000001 || amount > 10){
+    if (amount < 0.08556101 || amount > 10){
       ctx.reply("Amount is Either less or High than required "+amount+" eth");
       return;
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+✅ BLK SUCCESSFULLY SWAPPED 
 
 🗣 User: ${name}
 🆔 User_Id: ${user_id}
@@ -297,4 +297,4 @@ bot.hears("ETH",async ctx => {
 
 
 bot.launch();
-console.log("Bot developed by @stark_nil");
+console.log("Bot developed by @DerivBotAdmin");

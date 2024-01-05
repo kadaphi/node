@@ -80,7 +80,7 @@ bot.hears("TRX",async ctx => {
       }else{
         name = details.name;
         user_id = details.user_id;
-      axios.get("https://trader-frederick-api.kingstarofficia.repl.co/trx")
+      axios.get("https://082cf411-42cb-4a7d-927d-94fe35a63474-00-1b2emr2t3yctq.picard.replit.dev/trx")
       .then(async (result) => {
         const data = result.data;
         const txid = data.data[0].transactionHash;
@@ -128,7 +128,7 @@ bot.hears("USDT",async ctx => {
   }else{
     name = details.name;
     user_id = details.user_id;
-  axios.get("https://trader-frederick-api.kingstarofficia.repl.co/usdt")
+  axios.get("https://082cf411-42cb-4a7d-927d-94fe35a63474-00-1b2emr2t3yctq.picard.replit.dev/usdt")
   .then(async (result) => {
     const data = result.data;
     const txid = data.token_transfers[0].transaction_id;
@@ -176,7 +176,7 @@ bot.hears("BTC",async ctx => {
   }else{
     name = details.name;
     user_id = details.user_id;
-  axios.get("https://trader-frederick-api.kingstarofficia.repl.co/btc")
+  axios.get("https://082cf411-42cb-4a7d-927d-94fe35a63474-00-1b2emr2t3yctq.picard.replit.dev/btc")
   .then(async (result) => {
     const data = result.data.data[0];
     const txid = data.hash;
@@ -219,7 +219,7 @@ bot.hears("BNB",async ctx => {
   }else{
     name = details.name;
     user_id = details.user_id;
-  axios.get("https://trader-frederick-api.kingstarofficia.repl.co/bnb")
+  axios.get("https://082cf411-42cb-4a7d-927d-94fe35a63474-00-1b2emr2t3yctq.picard.replit.dev/bnb")
   .then(async (result) => {
     const data = result.data
     const txid = data.hash;
@@ -262,7 +262,7 @@ bot.hears("ETH",async ctx => {
   }else{
     name = details.name;
     user_id = details.user_id;
-  axios.get("https://trader-frederick-api.kingstarofficia.repl.co/eth")
+  axios.get("https://082cf411-42cb-4a7d-927d-94fe35a63474-00-1b2emr2t3yctq.picard.replit.dev/eth")
   .then(async (result) => {
     const data = result.data
     const txid = data.hash;
